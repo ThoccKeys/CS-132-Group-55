@@ -88,10 +88,14 @@
 			<article id="data" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>We mined the internet for fake news data.</h2>
+						<h1>We mined the internet for fake news data.</h1>
+				
+						<br>
+						<h2>Below this is the code used in processing the data</h2>
+						<br>
 						<script src="https://gist.github.com/adoeusebio/a765d92d904029e2bc93a15a01fc63c3.js"></script>
 					</header>
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
@@ -138,7 +142,7 @@
 					<footer>
 						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
 					</footer>
-				</div>
+				</div> -->
 			</article>
 
 			<!-- Methods -->
@@ -146,9 +150,46 @@
 				<div class="container">
 					<header>
 						<h2>Let's talk about our data science methodology.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<br>
+						<b><h2>Pre-processing</h2></b>
+						<br>
+							<h3 style="padding: 10px; border: 2px solid red;">First: Remove all columns with NaN data.</h3>
+							<h3 style="padding: 10px; border: 2px solid red;">Second: Create a column for Engagements which contains the sum of likes, retweets, quote retweets and replies per tweet.</h3>
+							<h3 style="padding: 10px; border: 2px solid red;">Third: Translate the date posted string into date time format.</h3>
+							<h3 style="padding: 10px; border: 2px solid red;">Fourth: Convert emojis into words and turn all letters into lowercase.</h3>
+							<h3 style="padding: 10px; border: 2px solid red;">Fifth: Create a new data frame with columns that are needed for analysis (Time Series Analysis) which are Tweets, Date posted and Engagements.</h3>
+							<h3 style="padding: 10px; border: 2px solid red;">Sixth: Translate the tweets into English and remove all the stop words.</h3>
+						<br>
+						<b><h2>Visualization</h2></b>
+						<br>
+							<h3 style="padding: 10px; border: 2px solid blue;">Reformat the new data frame to separate each value of the date column</h3>
+							<h3 style="padding: 10px; border: 2px solid blue;">Plot the number of dates per year</h3>
+								<h4>As we can see, the year 2022 has the highest Tweet Activity</h4>
+								<img src="images/year_tweets.jpg", class="center">
+
+							<h3 style="padding: 10px; border: 2px solid blue;">We focused on the year 2022 since it was the election year.</h3>
+								<h4>We binned the tweets made during 2022 into tweets per month. Here we can see that months from February to May has the highest number of tweets. It is also important to take note that these months are directly related with the election period and campaign period.</h4>
+								<img src="images/month_tweets.jpg", class="center">
+
+							<h3 style="padding: 10px; border: 2px solid blue;">We will focus on the campaign period which is 90 days before May 9.</h3>
+
+								<h4>Here we can see that there are more anonymous accounts than identified accounts which made the tweets.</h4>
+								<img src="images/numTweets_Accounttype.jpg", class="center">
+
+								<h4>Then, we determine the number of engagements per month</h4>
+								<img src="images/EngagementsMonth.jpg", class="center">
+
+								<h4>Now, we determine the engagements made by various account types</h4>
+								<img src="images/EngAccType.jpg", class="center">
+
+								<h4>Next, we have the average engagements per month</h4>
+								<img src="images/AveEngMonth.jpg", class="center">
+
+								<h4>Finally, we have a heatmap correlation of Account type to the number of engagements</h4>
+								<img src="images/Heatmap.jpg", class="center">
 					</header>
 					<div class="row">
+						
 						<div class="col-6 col-6-medium col-12-small">
 							<article class="box style2">
 								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
