@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>PH Twitter Fake News Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="index.html#overview">Overview</a></li>
+					<li><a href="index.html#data">Data</a></li>
+					<li><a href="index.html#methods">Methods</a></li>
+					<li><a href="index.html#results">Results</a></li>
+					<li><a href="index.html#team">Team</a></li>
+				</ul>
+			</nav>
+
+            <article id="top" class="wrapper style1">
+				<div class="container">
+                    <h1>Machine Learning Modeling</h1>
+                    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://jabiwockeez.github.io/Event-Detection/" height="525" width="100%"></iframe>
+                    <div class="col-8 col-7-large col-12-medium">
+                        <br>
+                        <h2>Event Detection Model (Peak Finding)</h2>
+                        <b><p style="text-align:justify;"> <!-- Describe the structure and mechanism of the chosen model. -->
+                            A dataset from a time series analysis serves as the model's input. 
+                            Peak finding was used as the algorithm for the model. In essence, it plots the quantity of 
+                            tweets in proportion to the posting date. Marks indicating the peak of the plots were the
+                            essential modification.
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!-- Train the model using the training data. -->
+                            The Date column from the dataset served as the model's predictor variable, and the Number 
+                            of Tweets column served as the model's target variable.
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!-- Evaluate the model's performance using the appropriate evaluation metrics. -->
+                            The analysis used the minimal value for the evaluation matrix since there wasn't an excessive 
+                            amount of data in the dataset. Without taking into account the plateaus, it scans the plot for 
+                            pronounced peaks.
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!-- Evaluation results: -->
+                            The model's performance is in line with what was anticipated. 
+                            It demonstrates the increase in tweets during several months, particularly during the 2022 election campaign.
+                        </p></b>
+                    </div>
+                    <form>
+                        <p style="text-align:center;"><input type="button" value="Go back!" onclick="history.back()"></p>
+                    </form>
+				</div>
+			</article>
+
+    </body>

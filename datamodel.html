@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>PH Twitter Fake News Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="index.html#overview">Overview</a></li>
+					<li><a href="index.html#data">Data</a></li>
+					<li><a href="index.html#methods">Methods</a></li>
+					<li><a href="index.html#results">Results</a></li>
+					<li><a href="index.html#team">Team</a></li>
+				</ul>
+			</nav>
+
+            <article id="top" class="wrapper style1">
+				<div class="container">
+                    <h1>Statistical Modeling</h1>
+                    <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://jabiwockeez.github.io/Data-Modeling/" height="525" width="100%"></iframe>
+                    <div class="col-8 col-7-large col-12-medium">
+                        <br>
+                        <h3>The hypothesis states that "The tweets were made strategically at dates where election-related news/events were happening."</h3>
+                        <b><p style="text-align:justify;"> <!-- Perform the appropriate statistical test based on the hypothesis. -->
+                            In order to prove the hypothesis, the data scientists needed to determine whether the number of tweets 
+                            have any relationship with the date when the tweets were made.
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!--Identify and validate the assumptions of the chosen statistical model. -->
+                            By identifying the variables in the dataset, the scientists chose the most appropriate statistical model
+                            as guided by a Scribbr flowchart. The predictor variable is the <i>date</i> which is quantitative in nature and 
+                            the target variable is the <i>number of tweets</i> which is also quantitative in nature.
+                            The scientists utilized the <i>Linear Regression Model</i> in order to determine if the number of tweets have
+                            any relationship with the date posted. 
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!-- Clearly report the test statistics, p-values, and any effect size measures. -->
+                            These are the returned results of the model: <br>
+                            &nbsp;&nbsp;&nbsp;- RMSE = 3.89 <br>
+                            &nbsp;&nbsp;&nbsp;- R2 = 0.29 <br>
+                            &nbsp;&nbsp;&nbsp;- P(x1): 0.0033617160347947355 <br>
+                            &nbsp;&nbsp;&nbsp;- There is a significant relationship between the predictor and response <br>
+                        </p></b>
+                        <b><p style="text-align:justify;"> <!-- Interpret the results and provide a conclusion based on the hypothesis test. -->
+                            The RMSE tells us the average difference between the actual and predicted values. The R2 tells us
+                            us how well the regression line approximates the actual data. These two aren't really significant
+                            in this context since we aren't trying to predict the values but rather determine the relationship between variables. <br>
+                            The p-value, whose value is significantly below the 0.05 threshold, is the most important component 
+                            of the outcome. This indicates that there is a strong correlation between the quantity of tweets and 
+                            the posting date.
+                        </p></b>
+                    </div>
+                    <form>
+                        <p style="text-align:center;"><input type="button" value="Go back!" onclick="history.back()"></p>
+                    </form>
+				</div>
+			</article>
+        
+    </body>

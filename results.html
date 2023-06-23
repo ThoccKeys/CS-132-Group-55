@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>PH Twitter Fake News Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="index.html#overview">Overview</a></li>
+					<li><a href="index.html#data">Data</a></li>
+					<li><a href="index.html#methods">Methods</a></li>
+					<li><a href="index.html#results">Results</a></li>
+					<li><a href="index.html#team">Team</a></li>
+				</ul>
+			</nav>
+
+            <article id="top" class="wrapper style1">
+				<div class="container">
+                    <h1>Data Communication</h1>
+                    
+                    <div class="col-8 col-7-large col-12-medium">
+                        <br>
+                        <h2>Introduction</h2>
+                        <b><p style="text-align:justify;"> <!-- Introduction -->
+                            &nbsp;&nbsp;&nbsp;At present times, it is common for people to voice out statements about their chosen candidates during election 
+                            season using social media. The influx of information flowing through our feeds compels us to postpone fact-checking 
+                            unless the said information does not align with our beliefs. This makes us vulnerable to accepting misinformation and 
+                            disinformation. <br>
+                            &nbsp;&nbsp;&nbsp;This study analyzes tweets made by Twitter users during the 2022 election that involve misinformation or disinformation 
+                            regarding the Marcos family and their corruption & human rights violations. <br>
+                            &nbsp;&nbsp;&nbsp;Using data science, we investigate if the mis/disinformed tweets were made to bring the Marcos name to a better light at 
+                            relevant dates with respect to the 2022 elections.
+                        </p></b>
+
+                        <h2>Materials and Methods</h2>
+                        <b><p style="text-align:justify;"> <!--Materials and Methods -->
+                            &nbsp;&nbsp;&nbsp;Proliferation of fake news is abundant in the Philippines and it was greatly noticed during the 2022 elections.
+                            This inspired the analysts to look into this issue and this <a href = "https://www.tsek.ph/marcoses-plunder-and-human-rights-violations-already-proven/"> topic</a>
+                            was the main concern. A plethora of users were trying to clean the Marcos name by proliferating fake news about proven cases. <br>
+                            &nbsp;&nbsp;&nbsp;We collected tweets through manual scraping and automated scraping using <i>snscrape</i>. A total of 150 tweets were used in our analysis. 
+                            These data are then pre-processed to become time-series data which was used for the Statistical and Machine Learning Model. <br>
+                            &nbsp;&nbsp;&nbsp;The pre-processing techniques that were mainly used were Dimensionality Reduction, Conversion of data type, Disecting of Data, Binning and Sorting.
+                            First, <i>dimensionality reduction</i> was used to reduce the number of columns in the dataset since not all will be used.
+                            Next, <i>conversion of data type</i> was used to convert the date into datetime data type and format for the code. 
+                            Followed by, <i>disecting the date</i> to have months and year columns for easy binning which is the next step.
+                            <i>Binning the data</i> into months which sums the number of tweets for that particular month.
+                            Finally, the data is <i>sorted</i> in ascending order which is from the earliest to the latest date in the dataset.
+                        </p></b>
+
+                        <h2>Results and Discussion</h2>
+                        <b><p style="text-align:justify;"> <!-- Results and Discussion -->
+                            &nbsp;&nbsp;&nbsp;Based on the Linear Regression Model, we find out that it has a p-value of 0.00336 which is significantly less than 0.05. 
+                            Therefore, there is a significant relationship between the Date and the Number of Tweets. This means that the number of 
+                            tweets changes depending on the date. 
+                            <br>
+                            &nbsp;&nbsp;&nbsp;Based on the Event Detection Model, we can see the spike in tweets as the year 2021 ends and reaches its peak at March 2022. 
+                            There are three months wherein the number of tweets is elevated. These are March, April and May with 17, 16 and 13 tweets respectively.  
+                            This is particularly significant since these are the campaign months which is 90 days before the election day (May 9, 2022).
+                            <br>
+                            &nbsp;&nbsp;&nbsp;The result of this research is important to protect democratic processes. Fake news has the power to sway public opinion and undercut democratic 
+                            procedures like voting. It also enables an individual to have a non-biased decision making. Individuals' ideas, attitudes, and behaviors can be affected by fake news. 
+                            <br>
+                            &nbsp;&nbsp;&nbsp;These findings contributes to and improves our understanding of the topic by offering empirical evidence, spotting patterns and trends, and gauging impact. 
+                            They help provide evidence-based solutions to the problems that disinformation poses and contribute to a more comprehensive understanding of it.
+                        </p></b>
+
+                        <h2>Implications</h2>
+                        <b><p style="text-align:justify;"> <!-- Implications  -->
+                            &nbsp;&nbsp;&nbsp;The establishment of laws and policies to combat fake news might be influenced by research findings. The development of media literacy initiatives and educational programs can benefit from research on fake news. 
+                            <br>
+                            &nbsp;&nbsp;&nbsp;It is essential for combating the problems caused by fake news and promoting an ecology of information that is more informed, dependable, and resilient.
+                        </p></b>
+
+                        <h2>Conclusion</h2>
+                        <b><p style="text-align:justify;"> <!-- Conclusion -->
+                            &nbsp;&nbsp;&nbsp;After collecting, pre-processing, exploring, and modeling twitter data on misinformation/disinformation about Marcos' Corruption, 
+                            we have come to the conclusion that: The tweets were made strategically at dates where election-related news/events were happening, 
+                            therefore we reject the null hypothesis. As early as the data exploration phase, it can be seen that the months leading up to the 
+                            election date had the highest number of tweets. It is further supported by the Event Detection Model which clearly shows a spike 
+                            in Twitter Chatter during the same months. 
+                            <br>
+                            &nbsp;&nbsp;&nbsp;Our study provides valuable insight on the spread of mis/disinformation in relation to socially-relevant events such as the 2022 elections, 
+                            and may be used as a reference for future events where information is a critical aspect. 
+                        </p></b>
+                    </div>
+                    <form>
+                        <p style="text-align:center;"><input type="button" value="Go back!" onclick="history.back()"></p>
+                    </form>
+				</div>
+			</article>
+        
+    </body>
